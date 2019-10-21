@@ -15,8 +15,8 @@ var orm = {
     });
   },
 
-  updateOne: function(tableName, val,) {
-    connection.query("UPDATE ?? SET ?? = ? WHERE ?", [tableName, val], function(err, result) {
+  updateOne: function(tableName, col, val, cb) {
+    connection.query("UPDATE ?? SET ?? = ? WHERE ?", [tableName, col, val], function(err, result) {
         if(err) throw err;
         cb(result);
     });
