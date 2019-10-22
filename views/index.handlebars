@@ -1,0 +1,31 @@
+<img src="" alt="burger">
+
+<h1>Eat-Da-Burger!</h1>
+
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li data-devour="{{devour}}">
+        <p class="{{id}}">{{burger_name}}</p>
+        <button class="devour" data-id="{{id}}">Devlour</button>
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>
+        <p class="{{id}}">{{burger_name}}</p>
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+
+
+<form class="create_burger">
+    <input type="text" class="burgerName" name="name">
+    <br>
+    <button type="submit">Submit</button>
+</form>
