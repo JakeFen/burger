@@ -1,22 +1,22 @@
-<img src="./assets/img/new-burger.jpg" height="200" width="300" alt="burger">
+<img src="./assets/img/new-burger.jpg" height="150" width="200" class="burger-img" alt="burger">
 
-<h1>Eat-Da-Burger!</h1>
+<h1 class="text-center">Eat-Da-Burger!</h1>
 
-<ul>
+<ul class="current-burgers">
     {{#each burgers}}
     {{#unless devoured}}
-    <li data-devour="{{devour}}">
-        <p class="{{id}}">{{burger_name}}</p>
-        <button class="devour" data-id="{{id}}">Devlour</button>
+    <li data-devour="{{devour}}" class="burger">
+        <p class="{{id}}">{{burger_name}} <button class="devour" data-id="{{id}}">Devlour</button></p>
+        
     </li>
     {{/unless}}
     {{/each}}
 </ul>
 
-<ul>
+<ul class="devoured-burgers">
     {{#each burgers}}
     {{#if devoured}}
-    <li>
+    <li class="burger">
         <p class="{{id}}">{{burger_name}}</p>
     </li>
     {{/if}}
@@ -24,7 +24,7 @@
 </ul>
 
 
-<form class="create_burger">
+<form class="create_burger text-center">
     <input type="text" class="burgerName" name="name">
     <br>
     <button type="submit">Submit</button>
