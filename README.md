@@ -14,7 +14,6 @@ On this app you'll want to click on the input field and type in a burger name. A
 
 ### Built With
 
-The main technologies that are being used in this app are
 * Handlebars
 * MYSQL
 * Node
